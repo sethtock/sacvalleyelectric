@@ -22,7 +22,8 @@ function initHamburgerMenu() {
     const navLinks = document.getElementById('navLinks');
     
     if (hamburger && navLinks) {
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
@@ -35,11 +36,13 @@ function initHamburgerMenu() {
                 hamburger.classList.remove('active');
             });
         });
+    } else {
+        console.warn('Hamburger menu elements not found');
     }
 }
 
 // Load all components when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    loadComponent('[data-component="header"]', 'components/header.html');
-    loadComponent('[data-component="footer"]', 'components/footer.html');
+document.addEventListener('DOMContentLoaded', async function() {
+    await loadComponent('[data-component="header"]', 'components/header.html');
+    await loadComponent('[data-component="footer"]', 'components/footer.html');
 });
