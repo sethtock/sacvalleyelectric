@@ -6,30 +6,11 @@
     <title>Project Experience - Sac Valley Electric</title>
     <meta name="description" content="View our extensive portfolio of commercial and industrial electrical projects across Northern California.">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="components/loader.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="index.html" class="logo-link">
-                    <img src="logo.gif" alt="Sac Valley Electric" class="logo">
-                </a>
-            </div>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Header Component (loaded by loader.js) -->
+    <div data-component="header"></div>
 
     <!-- Projects Hero -->
     <section class="page-hero">
@@ -121,12 +102,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Sac Valley Electric, Inc. All rights reserved.</p>
-            <p>California Contractor's State License #848435</p>
-        </div>
-    </footer>
+    <!-- Footer Component (loaded by loader.js) -->
+    <div data-component="footer"></div>
 </body>
 </html>
