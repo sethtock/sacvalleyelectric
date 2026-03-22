@@ -233,6 +233,18 @@ body {
     line-height: 1.9;
 }
 
+.about-content a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.about-content a:hover {
+    color: var(--secondary-color);
+}
+
 .credentials {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -481,6 +493,18 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.history-narrative a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.history-narrative a:hover {
+    color: var(--secondary-color);
+}
+
 .project-list {
     list-style: none;
     margin: 1.5rem 0;
@@ -531,6 +555,18 @@ body {
 .leader p {
     color: var(--light-text);
     margin: 0;
+}
+
+.leader a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.leader a:hover {
+    color: var(--secondary-color);
 }
 
 /* Projects Page */
@@ -682,6 +718,66 @@ body {
     background-color: rgba(255,255,255,0.3);
 }
 
+/* Union Commitment Section */
+.union-commitment {
+    background: linear-gradient(135deg, var(--light-bg) 0%, #f0f0f0 100%);
+    padding: 3rem 0;
+    border-top: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.union-commitment h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.union-commitment p {
+    color: var(--light-text);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.union-commitment a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.union-commitment a:hover {
+    color: var(--secondary-color);
+}
+
+.union-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.union-logo {
+    height: 80px;
+    width: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.union-logos a {
+    border: none;
+    display: inline-block;
+}
+
+.union-logos a:hover .union-logo {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
 @media (max-width: 768px) {
     .page-hero h1 {
         font-size: 1.8rem;
@@ -713,6 +809,14 @@ body {
     
     .contact-links .cta-button {
         width: 100%;
+    }
+    
+    .union-logos {
+        gap: 1.5rem;
+    }
+    
+    .union-logo {
+        height: 60px;
     }
 }
 
