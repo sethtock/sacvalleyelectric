@@ -123,6 +123,7 @@ body {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+        z-index: 1001;
     }
     
     .nav-links {
@@ -130,30 +131,37 @@ body {
         top: 70px;
         left: 0;
         right: 0;
+        width: 100vw;
         background-color: var(--primary-color);
+        display: flex !important;
         flex-direction: column;
-        gap: 0;
+        gap: 0 !important;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: max-height 0.4s ease;
         padding: 0;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         z-index: 999;
+        margin: 0;
     }
     
     .nav-links.active {
-        max-height: 500px;
+        max-height: 100vh;
         padding: 1rem 0;
     }
     
     .nav-links li {
         padding: 0;
+        margin: 0;
+        display: block;
     }
     
     .nav-links a {
         display: block;
         padding: 1rem 2rem;
         border-top: 1px solid rgba(255,255,255,0.1);
+        color: var(--white);
+        text-decoration: none;
     }
     
     .nav-links a:hover {
